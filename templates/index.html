@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image:url("https://png.pngtree.com/background/20230527/original/pngtree-stock-chart-image-with-price-graph-on-black-background-picture-image_2770316.jpg");
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .heading{
+            color:#fff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Stock Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="open">Open:</label>
+        <input type="text" name="open" placeholder="Enter a Numerical Value"><br>
+
+        <label for="high">High:</label>
+        <input type="text" name="high" placeholder="Enter a Numerical Value" required><br>
+
+        <label for="low">Low:</label>
+        <input type="text" name="low" placeholder="Enter a Numerical Value" required><br>
+
+        <label for="adj_close">Adj Close:</label>
+        <input type="text" name="adj_close" placeholder="Enter a Numerical Value" required><br>
+
+        <label for="volume">Volume:</label>
+        <input type="text" name="volume" placeholder="Enter a Numerical Value" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
